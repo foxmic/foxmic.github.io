@@ -58,23 +58,23 @@ nav a {
 
 /*///// .load() /////*/
 
-#load1background {
+.load1background {
   background-color: yellow;
 }
 
-#load2background {
+.load2background {
   background-color: orange;
 }
 
-#load3background {
+.load3background {
   background-color: #2ecc40;
 }
 
-.content {
+#content {
   width: 100%;
 }
 
-.speccontent {
+#speccontent {
   width: 95%;
   margin: 0 auto;
   padding: 25px 0;
@@ -94,6 +94,7 @@ nav a {
 #buttondiv {
   display: block;
   margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 #buttondiv a {

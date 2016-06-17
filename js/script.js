@@ -1,8 +1,9 @@
 
-$('#buttondiv a').on('click', function(e){
+$('#buttondiv a').on('click', function(e) {
   e.preventDefault();
   var url = this.href;
 
-  $('.speccontent').remove();
-  $('.content').load(url + '.speccontent').hide().fadeIn('slow');
-})
+  
+  $('#content').remove();
+  $('#container').load(url + ' #content').hide().fadeIn('slow');
+});
