@@ -1,7 +1,7 @@
 
 $('#buttondiv a').on('click', function(e) {
-  e.preventDefault();
   var url = this.href;
+  e.preventDefault();
 
   
   $('#content').remove();
