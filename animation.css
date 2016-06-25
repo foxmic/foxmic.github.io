@@ -1,0 +1,111 @@
+
+#wall {
+  width: 80%;
+}
+
+.animationwrapper {
+  height: 750px;
+}
+
+.sky, .nature, .street {
+  position: relative;
+}
+
+.sky {
+  height: 50%;
+  background: lightblue; 
+}
+
+#cloud {
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+#cloud:nth-child(1){
+  animation: cloud 60s linear infinite;
+}
+
+#cloud:nth-child(2){
+  width: 200px;
+  top: 30%;
+  left: 10%;
+  opacity: 0.8;
+  animation: cloud 50s linear infinite;
+}
+
+.nature {
+  height: 30%;
+  background-color: sandybrown;
+}
+
+#tree {
+  position: relative;
+  bottom: 45%;
+  left: 15%;
+}
+
+.street {
+  height: 20%;
+  background-color: grey;
+  border-top: 10px solid dimgrey;
+}
+
+.streetline {
+  box-sizing: border-box;
+  height: 0;
+  border: 5px dashed white;
+  position: relative;
+  top: 45%;
+}
+
+#mario, #luigi, #banana {
+  position: absolute;
+}
+
+#mario {
+  bottom: 30%;
+  animation:  drive 7s both infinite linear,
+              jump 1.5s 3.9s ease; 
+
+}
+
+#luigi {
+  bottom: 5%;
+  animation-name: drive;
+  animation-duration: 7.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#banana {
+  left: 70%;
+  animation: banana 2s 5.5s both linear;
+}
+/*/// KEYFRAMES ///*/
+
+@keyframes drive {
+  from {transform: translateX(-225px);}
+  to {transform: translateX(1500px);}
+}  
+
+@keyframes cloud {
+  from{transform: translateX(-300px);}
+  to{transform: translateX(1500px);}
+}
+
+@keyframes jump {
+  0% {bottom: 30%;}
+  50% {bottom: 60%;}
+  100%{bottom: 30%;}
+}
+
+@keyframes banana {
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100%{opacity: 0;}
+}
+
+
+

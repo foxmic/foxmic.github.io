@@ -8,5 +8,6 @@ $('#buttondiv a').on('click', function(e) {
 
   
   $('#content').remove();
-  $('#container').load(url + ' #content').hide().fadeIn('slow');
+  $('#container').load(url + ' #content').hide().fadeIn(500);
+
 });
