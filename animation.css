@@ -23,7 +23,7 @@
 }
 
 #cloud:nth-child(1){
-  animation: cloud 60s linear infinite;
+  animation: cloud 50s linear infinite reverse;
 }
 
 #cloud:nth-child(2){
@@ -31,7 +31,7 @@
   top: 30%;
   left: 10%;
   opacity: 0.8;
-  animation: cloud 50s linear infinite;
+  animation: cloud 60s linear infinite reverse;
 }
 
 .nature {
@@ -40,21 +40,23 @@
 }
 
 #tree {
-  position: relative;
+  position: absolute;
   bottom: 45%;
   left: 15%;
+  animation: tree 3s linear infinite reverse;
 }
 
 .street {
   height: 20%;
   background-color: grey;
   border-top: 10px solid dimgrey;
+  border-bottom: 10px solid dimgrey;
 }
 
 .streetline {
   box-sizing: border-box;
-  height: 0;
-  border: 5px dashed white;
+  height: 0px;
+  border: 2px solid white;
   position: relative;
   top: 45%;
 }
@@ -65,8 +67,7 @@
 
 #mario {
   bottom: 30%;
-  animation:  drive 7s both infinite linear,
-              jump 1.5s 3.9s ease; 
+  animation: drive 6.5s both infinite linear;
 
 }
 
@@ -79,33 +80,31 @@
   animation-timing-function: linear;
 }
 
-#banana {
-  left: 70%;
-  animation: banana 2s 5.5s both linear;
-}
+
 /*/// KEYFRAMES ///*/
 
 @keyframes drive {
-  from {transform: translateX(-225px);}
-  to {transform: translateX(1500px);}
-}  
+  0%{transform:translateX(-50%);}
+  33%{transform:translateX(200%);}
+  66%{transform:translateX(450);}
+  100%{transform:translateX(700%);}
+}
 
 @keyframes cloud {
-  from{transform: translateX(-300px);}
-  to{transform: translateX(1500px);}
+  from{transform: translateX(-150%);}
+  to{transform: translateX(650%);}
 }
 
-@keyframes jump {
-  0% {bottom: 30%;}
-  50% {bottom: 60%;}
-  100%{bottom: 30%;}
+@keyframes tree {
+  from{transform: translateX(-200%);}
+  to{transform: translateX(400%);}
 }
 
-@keyframes banana {
-  0% {opacity: 1;}
-  50% {opacity: 0.5;}
-  100%{opacity: 0;}
-}
 
+/*/// MEDIA ///*/
+
+@media screen only (max-width) {
+
+}
 
 
